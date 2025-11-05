@@ -1,0 +1,36 @@
+.navbar
+{
+    background-color: #154a23;
+    color: #fff;
+    padding: 1em;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.navbar ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar li
+{
+    display: inline-block;
+    margin-right: 10px;
+}
+.navbar
+{
+    color: #fff;
+    text-decoration: none;
+}
+.navbar .position
+{
+    font-size: 150%;
+    color:rgb(255, 255, 255);
+}
+.titulo
+{
+  margin-top:3.5%;
+}

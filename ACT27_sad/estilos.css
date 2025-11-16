@@ -1,0 +1,151 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: gray;
+}
+
+header, main, footer
+{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #103610;
+    padding: 10px 20px;
+
+}
+
+header h1
+{
+    color: white;
+    margin: 0;
+    font-size: 3em;
+    margin: 30px 30px 30px; 
+}
+
+#menu
+{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li
+{
+    padding: 0 15px;
+    border-right: 1px solid white;
+}
+#menu li:last-child
+{
+    border-right: none;
+}
+
+
+#menu a
+{
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 1.3em;
+}
+
+main 
+{
+    background-color: white;
+}
+
+#mascotas
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.mascota
+{
+    display: flex;
+    align-items: flex-start;
+    max-width: 500px;
+    background-color: white;
+}
+
+.mascota .info h3
+{
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.mascota .info p
+{
+
+    font-size: 1.4em;
+    line-height: 1.5;
+}
+
+#colaboradores
+{
+    
+    background-color: #103610;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 40px;
+    overflow-x: auto;
+}
+
+.colaborador
+{
+    flex-shrink: 0;
+    min-width: 200px;
+    text-align: center;
+    background-color: transparent;
+    border-right: 1px solid white;
+    padding: 20px 30px
+}
+
+#colaboradores .colaborador:last-child
+{
+    border-right: none;
+}
+
+.colaborador img
+{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 10px solid #8aad8a;
+    margin: 0 auto 15px auto;
+    display: block;
+}
+
+.colaborador h3
+{
+    color:white;
+}
+.colaborador p
+{
+    color: white;
+}
+
+footer
+{
+    background-color: #103610;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}

@@ -63,7 +63,7 @@ header h1
 
 main 
 {
-    background-color: white;
+    background-color: white; 
 }
 
 #mascotas
@@ -96,15 +96,25 @@ main
     line-height: 1.5;
 }
 
+.mascota img
+{
+    margin-right: 20px;
+}
+
 #colaboradores
 {
-    
     background-color: #103610;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     padding: 40px;
     overflow-x: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
 }
 
 .colaborador
@@ -146,6 +156,11 @@ footer
     background-color: #103610;
     text-align: center;
     color: white;
-    text-decoration: none;
     font-size: 1.5em;
+}
+
+footer a
+{
+    text-decoration: none;
+    color: inherit;
 }

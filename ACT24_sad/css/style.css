@@ -1,36 +1,172 @@
+body
+{
+  background-color: #54FF9F;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+.header-container
+{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 5em;
+}
+.logo
+{
+  width: 50px;
+  height: 40px;
+  border-radius:100%;
+}
+.descripcio
+{
+  padding: 1em 2em;
+  color: #224A34;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+.opinio
+{
+  margin-top: 1em;
+  background-color: #8FFFC1;
+  border-left: 5px solid #3CB97A;
+  padding: 1em;
+  border-radius: 10px;
+  font-style: italic;
+}
+footer
+{
+  text-align: center;
+  padding: 1em;
+  margin-top: 3em;
+  color: #224A34;
+}
+footer .icon
+{
+  width: 24px;
+  vertical-align: middle;
+  margin-left: 0.5em;
+}
 .navbar
 {
-    background-color: #154a23;
-    color: #fff;
-    padding: 1em;
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
+  background-color: #5BE8A7;
+  color: #224A34;
+  padding: 1em 5em;
+  position:fixed;
+  top: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(300px, 70%, 900px);
+  z-index: 100;
+  border-radius:50px;
+  border: 3px solid #3CB97A;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 .navbar ul
 {
-    list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: wrap;
 }
 .navbar li
 {
-    display: inline-block;
-    margin-right: 10px;
+    list-style: none;
 }
-.navbar
-{
-    color: #fff;
-    text-decoration: none;
+.navbar a {
+  position:relative;
+  color: #224A34;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
-.navbar .position
+.navbar a::after
 {
-    font-size: 150%;
-    color:rgb(255, 255, 255);
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left:0;
+  width:0;
+  height:2px;
+  background-color: #0F6B3D;
+  transition: width 0.3s ease;
+}
+.navbar a:hover
+{
+  transform: translateY(-3px);
+  color: #0F6B3D;
+}
+
+.navbar a:hover::after
+{
+  width: 100%
 }
 .titulo
 {
-  margin-top:3.5%;
+  margin: 0.5em auto 2em auto;
+  max-width: 900px;
+  border: 3px solid #3CB97A;
+  border-radius: 50px;
+  background-color: #5BE8A7;
+  color: #224A34;
+  padding: 1em 3em;
+  text-align: center;
+}
+.content
+{
+  border: 3px solid #3CB97A;
+  border-radius: 50px;
+  max-width: 900px;
+  margin:0 auto;
+  background-color: #54FFC8;
+  overflow: hidden;
+}
+.content img
+{
+  width: 100%;
+  border-radius: 50px;
+  display:block;
+}
+.content-section
+{
+  margin: 2em auto;
+  max-width: 900px;
+  border: 3px solid #3CB97A;
+  border-radius: 50px;
+  background-color: #54FFc8;
+  padding: 2em;
+}
+.info
+{
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+.content-photo
+{
+  width: 250px;
+  border-radius: 30px;
+  border: 3px solid #3CB97A;
+}
+.content-description
+{
+  flex: 1;
+  color: #224A34;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+.content-description h3
+{
+  margin-top: 1em;
+  color: #0F6B3D;
+}
+.content-llista
+{
+  padding-left:1.5em;
+  margin-top:0.5em;
+  list-style-type: "🎬 ";
 }

@@ -1,3 +1,5 @@
+/*=============INICIO DE ESTILOS DE PLANTILLA==============*/
+
 /*Reset básico: Eliminacion del padding y evita que el tamaño crezca por máargenes internos*/
 *
 {
@@ -138,13 +140,14 @@ body
 {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 /*Cada columna del footer*/
 .footerLinks
 {
-  width: 25%;
-  padding: 0 15px;
+  flex: 1 1 200px;
+  max-width: 300px;
 }
 
 /*Titulos de los bloques del footer*/
@@ -254,3 +257,5 @@ body
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/*=============FINAL DE ESTILOS DE PLANTILLA==============*/

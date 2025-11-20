@@ -17,7 +17,9 @@ Bienvenido a mi colección de prácticas y proyectos. Este repositorio documenta
 
 El trabajo principal de este repositorio. Una web moderna sobre videojuegos con estética **Glassmorphism**.
 
-**Ubicación:** [`projecte-final/main/`](projecte-final/main/indexSAD.html)
+**Ubicación:** [`projecte-final/testing/`](projecte-final/testing/indexSAD.html)
+* **Nota:** La ubicación del proyecto final es [`projecte-final/main/`](projecte-final/main/indexSAD.html), pero la carpeta `testing` contiene la versión en desarrollo con comentarios y pruebas.
+
 
 ### Características Clave
 * **Diseño Glassmorphism:** Uso intensivo de `backdrop-filter: blur` para crear paneles de cristal semitransparentes.

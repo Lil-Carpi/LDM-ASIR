@@ -51,11 +51,12 @@ Evolución de ejercicios realizados durante el curso:
 > *"Es buena práctica documentar lo que se aprende."*
 
 ### Glassmorphism
-Efecto de tipo cristal opaco, popularizado recientemente por Apple y presente antiguamente en Windows Aero.
+Efecto de tipo cristal opaco. Popularizado por Apple con su entorno gráfico "Liquid Glass", un efecto que drena la batería del teléfono a velocidad insana,
+y que ya estaba presente desde Windows 7 con Windows Aero. Este efecto utiliza `backdrop-filter: blur` para crear una apariencia de vidrio esmerilado.
 * **Nota:** El uso excesivo de `backdrop-filter` puede impactar el rendimiento (batería) en móviles antiguos.
 
 ### Etiqueta `<iframe>`
-Se utiliza para incrustar documentos externos (mapas, vídeos).
+Se utiliza para incrustar documentos externos (mapas, vídeos). Es un efecto que ya utilicé una vez en otro proyecto personal que ahora es *lost media*, lastimosamente.
 * **Accesibilidad:** Es crucial incluir el atributo `title="..."` para que los lectores de pantalla sepan qué contenido se está mostrando.
 
 ---

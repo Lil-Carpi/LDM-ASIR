@@ -259,3 +259,30 @@ body
 }
 
 /*=============FINAL DE ESTILOS DE PLANTILLA==============*/
+/*====================Seccion juegos======================*/
+.sectionTitle
+{
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #00C3FF;
+  text-shadow: 0 0 15px rgba(0, 195, 255, 0.5);
+}
+
+.cardsContainer
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  padding: 0 1.5rem;
+  margin-bottom: 5rem;
+}
+/*==================Fin seccion juegos====================*/
+
+
+
+
+
+/*=====================Seccion CTA========================*/
+
+/*===================Fin seccion CTA======================*/

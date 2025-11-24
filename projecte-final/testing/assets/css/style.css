@@ -1,117 +1,363 @@
-/*=============INICIO DE ESTILOS DE PLANTILLA==============*/
-
-/*Reset básico: Eliminacion del padding y evita que el tamaño crezca por máargenes internos*/
-*
-{
+/* =========================================
+   1. RESET Y ESTILOS GENERALES
+   ========================================= */
+* {
   padding: 0;
+  margin: 0; /* Añadido margin 0 para asegurar reset total */
   box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
 }
 
-/*Estilo básico del cuerpo*/
-body
-{
+body {
   font-family: 'Manjari', sans-serif;
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
+  min-height: 100vh;
 }
 
-/*Barra de navegacion fija. Efecto "glassmorphism"*/
-.navbar
-{
-  position:fixed;
+/* Contenedor principal para evitar que el contenido quede oculto por el navbar/footer fijos */
+.content {
+  padding-top: 8rem;      /* Espacio para el Navbar */
+  padding-bottom: 12rem;  /* Espacio para el Footer */
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #00c3ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(0, 195, 255, 0.6);
+}
+
+/* =========================================
+   2. NAVBAR (Menú de Navegación)
+   ========================================= */
+.navbar {
+  position: fixed;
   top: 1rem;
   left: 1rem;
   right: 1rem;
-  width: calc(100% -2rem);
+  width: calc(100% - 2rem); /* CORREGIDO: Espacios añadidos en el calc */
   padding: 1rem 1.5rem;
   border-radius: 20px;
-  color: white;
-  z-index: 64;
+  z-index: 100; /* Z-index alto para estar siempre encima */
 
-  /*Efecto cristal difuminado*/
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/*Contenedor del logo*/
-.logoContainer
-{
-  display: flex;
-  justify-content: center;
-}
-
-/*Estilo del texto e icono del logo*/
-.logoContainer a
-{
+.logoContainer a {
   color: white;
   font-size: 1.125rem;
   font-weight: bold;
   margin-right: 1rem;
-  text-decoration: none;
-}
-/*Aumenta el tamaño del logo en pantallas más grandes*/
-@media (min-width: 768px){
-  .logoContainer a
-  {
-    font-size: 1.25rem;
-  }
 }
 
-/*Lista de links del menú*/
-.navbarLinks
-{
-  list-style: none;
-  margin-right: 1rem;
-  padding: 0;
-  flex-grow: 1;
-}
-/*En pantallas grandes, la lista se alinea de manera horizontal*/
-@media (min-width: 768px){
-  .navbarLinks
-  {
+@media (min-width: 768px) {
+  .logoContainer a { font-size: 1.25rem; }
+  
+  .navbarLinks {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
-}
-
-/*Espacio entre items del menú*/
-.navbarLinks li
-{
-  margin-right: 0.5rem;
-}
-/*En pantallas grandes, los items se muestran en línea con más espacio*/
-@media (min-width: 768px) {
-  .navbarLinks li
-  {
-    display: inline-block;
     margin-right: 1rem;
   }
+  
+  .navbarLinks li {
+    margin-left: 1.5rem; /* Separación entre items */
+  }
 }
 
-/*Estilos de enlaces del navbar*/
-.navbarLinks a
-{
-  text-decoration: none;
+.navbarLinks a {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbarLinks a:hover {
+  color: #00c3ff;
+}
+
+/* =========================================
+   3. MENÚ MÓVIL (Checkbox Hack)
+   ========================================= */
+#menu-toggle { display: none; }
+
+.hamburger-label {
+  display: none; /* Oculto en PC */
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger-label { display: block; }
+
+  .navbarLinks {
+    position: absolute;
+    top: 80px;
+    left: 0; 
+    right: 0;
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  /* Mostrar menú al marcar checkbox */
+  #menu-toggle:checked ~ .navbarLinks {
+    display: flex;
+    animation: fadeIn 0.4s ease forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   4. NUEVA SECCIÓN TOP VENTAS (Ranking)
+   ========================================= */
+
+.section-title .highlight-neon {
+  color: #fff;
+  text-shadow: 0 0 10px #00c3ff, 0 0 20px #00c3ff;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+.ranking-container {
+  display: flex;
+  height: 500px; /* Altura fija necesaria para PC */
+  gap: 1rem;
+  padding: 0 1.5rem;
+  margin-bottom: 5rem;
+}
+
+/* Estilo base de la tarjeta */
+.rank-card {
+  position: relative;
+  flex: 1; /* Todos empiezan igual */
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Imagen de fondo */
+.card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center top;
+  filter: grayscale(80%) brightness(0.5) contrast(1.2); /* Oscuro por defecto */
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+/* Insignia (#1, #2...) */
+.rank-badge {
+  position: absolute;
+  top: 20px; 
+  left: 20px;
+  width: 50px; 
+  height: 50px;
+  background: rgba(15, 23, 42, 0.8);
+  color: #00c3ff;
+  border: 2px solid #00c3ff;
+  border-radius: 50%;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  font-size: 1.5rem; 
+  font-weight: bold;
+  z-index: 3;
+  box-shadow: 0 0 15px rgba(0, 195, 255, 0.5);
+}
+
+/* Estilo especial para el Top 1 (Dorado) */
+.rank-1 .rank-badge {
+   color: #ffd700;
+   border-color: #ffd700;
+   box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+/* Capa de texto */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 10%, rgba(15, 23, 42, 0.3) 60%, transparent 100%);
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.card-details {
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+
+.card-details h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
   color: white;
 }
 
-/*Contenedor general centrado*/
-.container
-{
-  max-width: 1200px;
-  margin: 0 auto;
+.short-desc {
+  font-size: 1.1rem;
+  color: #00c3ff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.full-desc {
+  font-size: 0.95rem;
+  color: #d1d5db;
+  line-height: 1.5;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+/* --- INTERACTIVIDAD HOVER (PC) --- */
+
+/* 1. Oscurecer las otras al pasar el mouse */
+.ranking-container:hover .rank-card:not(:hover) {
+  flex: 0.7;
+  filter: brightness(0.6) blur(1px);
+}
+
+/* 2. Expandir la tarjeta activa */
+.rank-card:hover {
+  flex: 2; /* Se ensancha */
+  border-color: #00c3ff;
+  box-shadow: 0 10px 40px -10px rgba(0, 195, 255, 0.5);
+  z-index: 10;
+}
+
+/* 3. Activar imagen y texto */
+.rank-card:hover .card-bg {
+  filter: grayscale(0%) brightness(1.1);
+  transform: scale(1.1) rotate(1deg);
+}
+
+.rank-card:hover .card-details {
+  transform: translateY(0);
+}
+
+.rank-card:hover .full-desc {
+  opacity: 1;
+  max-height: 100px;
+  margin-top: 1rem;
+}
+
+/* --- RESPONSIVE RANKING (MÓVIL) --- */
+@media (max-width: 900px) {
+  .ranking-container {
+    flex-direction: column;
+    height: auto;
+    gap: 2rem;
+  }
+  .rank-card {
+    height: 350px;
+    flex: none; /* Desactiva flex dinámico */
+    width: 100%;
+  }
+  /* Desactivar efectos complejos en móvil */
+  .ranking-container:hover .rank-card:not(:hover) { flex: none; filter: none; }
+  .rank-card:hover { flex: none; transform: scale(1.02); }
 }
 
 
-/*Estilos del footer. Estilo glassmorphism*/
+/* =========================================
+   5. CTA SECTION (Botón "Ver catálogo")
+   ========================================= */
+.cta-section {
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cta-content {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 195, 255, 0.3);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.cta-content:hover {
+  box-shadow: 0 0 30px rgba(0, 195, 255, 0.2);
+  border-color: #00c3ff;
+}
+
+.cta-icon {
+  font-size: 3rem;
+  color: #00c3ff;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 14px 40px;
+  color: #00c3ff;
+  border: 2px solid #00c3ff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-button:hover {
+  background-color: #00c3ff;
+  color: #0f172a;
+  box-shadow: 0 0 25px rgba(0, 195, 255, 0.8);
+}
+
+
+/* =========================================
+   6. FOOTER
+   ========================================= */
 .footer
 {
   bottom: 1rem;
@@ -253,249 +499,7 @@ body
 
 .content {
   padding-top: 7rem;
-  padding-bottom: 30rem;
+  padding-bottom: 10rem;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-/*=============FINAL DE ESTILOS DE PLANTILLA==============*/
-/* ============= NUEVAS SECCIONES (TOP JUEGOS Y CTA) ============== */
-
-/* Título de la sección */
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 3rem;
-  color: #00c3ff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 0 0 15px rgba(0, 195, 255, 0.6);
-}
-
-/* --- Estilos del Contenedor de Cards --- */
-.cards-container {
-  display: grid;
-  /* Esto asegura que las cajas tengan un ancho mínimo y se ajusten */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem; /* Espacio entre las cajas de cristal */
-  padding: 0 1.5rem;
-  margin-bottom: 5rem;
-}
-
-/* --- ESTILO RECUADRO GLASSMORPHISM PARA CADA JUEGO --- */
-.game-card {
-  /* 1. El efecto Cristal (Glassmorphism) */
-  background: rgba(255, 255, 255, 0.07); /* Fondo blanco muy transparente */
-  backdrop-filter: blur(16px) saturate(180%); /* Desenfoque fuerte del fondo */
-  -webkit-backdrop-filter: blur(16px) saturate(180%); /* Para Safari */
-  
-  /* 2. El Borde del recuadro */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde blanco semitransparente */
-  border-radius: 20px; /* Bordes redondeados iguales al navbar */
-  
-  /* 3. Sombra para dar profundidad 3D */
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-
-  /* 4. Comportamiento */
-  overflow: hidden; /* Para que la imagen respete los bordes redondos */
-  display: flex;
-  flex-direction: column; /* Organiza imagen arriba, texto abajo */
-  transition: all 0.4s ease; /* Suaviza la animación */
-  height: 100%; /* Hace que todas las cajas midan lo mismo de alto */
-}
-
-/* Animación Hover: La caja "flota" y se ilumina */
-.game-card:hover {
-  transform: translateY(-10px) scale(1.02); /* Sube y crece ligeramente */
-  background: rgba(255, 255, 255, 0.12); /* Se vuelve un poco más claro */
-  border-color: #00c3ff; /* El borde se pone color neón */
-  box-shadow: 0 0 20px rgba(0, 195, 255, 0.4); /* Resplandor azul exterior */
-}
-
-/* Estilo de la imagen dentro del recuadro */
-.card-image img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea sutil separadora */
-}
-
-/* Estilo del texto dentro del recuadro */
-.card-info {
-  padding: 1.5rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 1;
-}
-
-.card-info h3 {
-  font-size: 1.6rem;
-  margin-bottom: 0.8rem;
-  color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-
-.card-info p {
-  color: #d1d5db; /* Gris muy claro para leerse bien sobre el cristal */
-  font-size: 1rem;
-  line-height: 1.6;
-  font-style: italic;
-}
-
-/* --- Estilos de la Sección de Enlace (CTA) --- */
-/* (Esto se mantiene igual para no romper el estilo del botón de abajo) */
-.cta-section {
-  margin: 2rem auto 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  justify-content: center;
-}
-
-.cta-content {
-  width: 100%;
-  max-width: 900px;
-  /* Mismo glassmorphism pero con tinte azulado */
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 195, 255, 0.3);
-  border-radius: 20px;
-  padding: 3rem 2rem;
-  text-align: center;
-  transition: box-shadow 0.3s ease;
-}
-
-.cta-content:hover {
-  box-shadow: 0 0 30px rgba(0, 195, 255, 0.2);
-  border-color: #00c3ff;
-}
-
-.cta-icon {
-  font-size: 3rem;
-  color: #00c3ff;
-  margin-bottom: 1rem;
-  filter: drop-shadow(0 0 5px rgba(0,195,255,0.8));
-}
-
-.cta-content p {
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
-  color: #ffffff;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 14px 40px;
-  background-color: transparent;
-  color: #00c3ff;
-  border: 2px solid #00c3ff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  border-radius: 50px;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.cta-button:hover {
-  background-color: #00c3ff;
-  color: #0f172a;
-  box-shadow: 0 0 25px rgba(0, 195, 255, 0.8);
-}
-
-/* ============= MENÚ SIN JAVASCRIPT (CHECKBOX HACK) ============== */
-
-/* 1. Ocultar siempre el checkbox real */
-#menu-toggle {
-  display: none;
-}
-
-/* 2. Estilo del botón hamburguesa (Label) */
-.hamburger-label {
-  display: none; /* Oculto en PC */
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.hamburger-label:hover {
-  color: #00c3ff;
-}
-
-/* 3. Comportamiento Responsive */
-@media (max-width: 768px) {
-  
-  /* Mostrar el botón en móvil */
-  .hamburger-label {
-    display: block;
-  }
-
-  /* Estilos base del menú en móvil (Cerrado por defecto) */
-  .navbarLinks {
-    position: absolute;
-    top: 80px; /* Altura para que no tape el logo */
-    left: 0;
-    right: 0;
-    
-    /* Ocultamos usando display none */
-    display: none; 
-    
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 2rem;
-
-    /* ESTÉTICA GLASSMORPHISM IGUAL A TU DISEÑO */
-    background: rgba(15, 23, 42, 0.9); /* Un poco más opaco para leer mejor */
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-    z-index: 100;
-  }
-
-  /* --- LA MAGIA: Cuando el checkbox está marcado (checked) --- */
-  /* El selector '~' busca al hermano (navbarLinks) que sigue al checkbox */
-  #menu-toggle:checked ~ .navbarLinks {
-    display: flex;
-    animation: glassFadeIn 0.4s ease forwards;
-  }
-
-  /* Efecto visual: Girar el icono al abrir */
-  #menu-toggle:checked ~ .hamburger-label i {
-    color: #00c3ff;
-    transform: rotate(90deg); /* Rota el icono 90 grados */
-    transition: transform 0.3s;
-  }
-
-  /* Ajustes de los enlaces para móvil */
-  .navbarLinks li {
-    margin-right: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .navbarLinks li a {
-    display: block;
-    font-size: 1.2rem;
-    padding: 0.5rem;
-    border-bottom: 1px solid rgba(255,255,255,0.05); /* Separador sutil */
-  }
-  
-  /* Iconos sociales más grandes */
-  .navbarLinks .social-group a {
-    margin: 0 15px;
-    font-size: 1.5rem;
-  }
-}
-
-/* Animación suave de entrada */
-@keyframes glassFadeIn {
-  from { opacity: 0; transform: translateY(-15px); }
-  to { opacity: 1; transform: translateY(0); }
 }

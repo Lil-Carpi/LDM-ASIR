@@ -197,7 +197,7 @@ body
 
 .socialLinks a:hover
 {
-  background-color: #00C3FF
+  background-color: #41eb60;
 }
 /*Footer responsive para moviles*/
 @media(max-width: 991px) {

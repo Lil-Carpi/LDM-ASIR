@@ -4,8 +4,10 @@
 *
 {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
 }
 
 /*Estilo básico del cuerpo*/
@@ -14,6 +16,7 @@ body
   font-family: 'Manjari', sans-serif;
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
+  min-height: 100vh;
 }
 
 /*Barra de navegacion fija. Efecto "glassmorphism"*/
@@ -251,7 +254,8 @@ body
 
 /*Espacio para que el contenido no quede oculto por el navbar y el footer*/
 
-.content {
+.content 
+{
   padding-top: 7rem;
   padding-bottom: 30rem;
   max-width: 1200px;
@@ -259,6 +263,51 @@ body
 }
 
 /*=============FINAL DE ESTILOS DE PLANTILLA==============*/
+/*======================Responsividad=====================*/
+#menu-toggle {display: none;}
+
+.hamburguer-label 
+{
+  display: none;
+  font-size:1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width:768px) {
+  .hamburguer-label { display: block;}
+  .navbarLinks{
+    position: absolute;
+    top: 80px;
+    left:0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding:2rem;
+
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0 ,0 ,0.5)
+  }
+
+  #menu-toogle:checked ~ .navbarLinks{
+    display: flex;
+    animation: fadeIn 0.4s ease forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/*============FINAL DE ESTILOS DE RESPONSIVIDAD===========*/
+
+
 /*====================Seccion juegos======================*/
 .sectionTitle
 {

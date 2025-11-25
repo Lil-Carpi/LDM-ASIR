@@ -1,3 +1,4 @@
+/*======Reset y estilos generales======*/
 * 
 {
     padding: 0;
@@ -32,4 +33,63 @@ body
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 0 0 15px rgba(0, 195, 255, 0.6);
+}
+
+/*=======NAVBAR======*/
+.navbar
+{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    width: calc(100% - 2rem);
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    z-index: 100;
+
+    /*Efecto glassmorphism*/
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer a
+{
+    color: white;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-right: 1rem
+}
+
+@media (max-width: 768px)
+{
+    .logoContainer a { font-size: 1.25rem; }
+    
+    .navbarLinks
+    {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 1rem;
+    }
+
+    .navbarLinks li 
+    {
+        margin-left: 1.5rem;
+    }
+}
+
+.navbarLinks a
+{
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbarLinks a:hover{
+    color: #00c3ff;
 }

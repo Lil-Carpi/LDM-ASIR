@@ -284,4 +284,253 @@ body
   margin: 0 auto;
 }
 
+.sectionTitle
+{
+  font-size: 2.5rem;
+  margin-bottom:3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
+.highlight-neon
+{
+  color: #fff;
+  text-shadow: 0 0 10px #00c3ff, 0 0 20px #00c3ff;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+/*=======Layout grid========*/
+
+.ranking-grid
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.rank-card
+{
+  position: relative;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #1e239b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img
+{
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: brightness(0.8);
+}
+
+.card-content
+{
+  height: 40%;
+  padding: 1.5rem;
+  background: linear-gradient(to bottom, #1e239b, #0f172a);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.rank-badge
+{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 45px;
+  height: 45px;
+  background: rgba(15, 23, 42, 0.9);
+  color: #00c3ff;
+  border: 2px solid #00c3ff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.rank-1 .rank-badge
+{
+  color: #ffd700;
+  border-color: #ffd700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.rank-2 .rank-badge
+{
+  color: #c0c0c0;
+  border-color: #c0c0c0;
+  box-shadow: 0 0 15px rgba(192, 192, 192, 0.4);
+}
+
+.rank-3 .rank-badge
+{
+  color: #cd7f32;
+  border-color: #cd7f32;
+  box-shadow: rgba(205, 127, 50, 0.4);
+}
+
+.card-content h3 
+{
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.genre-tag
+{
+  display: inline;
+  font-size: 1rem;
+  color: #00c3ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.description
+{
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.rank-card:hover
+{
+  transform: translateY(-10px);
+  /*Mantener box shadow. Al ser css reutilizable, se ha de dejar para el videojocsSAD.html*/
+  border-color: #00c3ff;
+  box-shadow: 0 20px 40px -5px rgba(0, 192, 255, 0.15);
+}
+
+.rank-card:hover .card-img
+{
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.rank-1:hover
+{
+  border-color: #ffd700;
+  box-shadow: 0 20px 40px -5px rgba(255, 215, 0, 0.15);
+}
+
+.rank-2:hover
+{
+  border-color: #c0c0c0;
+  box-shadow: 0 20px 40px -5px rgba(192, 192, 192, 0.15);
+}
+
+.rank-3:hover
+{
+  border-color: #cd7f32;
+  box-shadow: 0 20px 40px -5px rgba(205, 127, 50, 0.15);
+}
+
+/*======SECCION Call To Action (CTA)======*/
+
+.cta-section
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cta-card
+{
+  width: 100%;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8));
+  border: 1px solid rgba(0, 195, 255, 0.3);
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-card::before
+{
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, #00c3ff, transparent);
+  opacity: 0.7;
+}
+
+@keyframes float
+{
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.cta-icon
+{
+  font-size: 3rem;
+  color: #00c3ff;
+  margin-bottom: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.cta-card h3
+{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.cta-card p
+{
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.btn-neon
+{
+  padding: 12px 35px;
+  background: transparent;
+  color: #00c3ff;
+  border: 2px solid #00c3ff;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-neon:hover
+{
+  background: #00c3ff;
+  color: #0f172a;
+  box-shadow: 0 0 20px rgba(0, 195, 255, 0.6);
+}
+
+@media (max-width: 900px) {
+  .ranking-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .rank-card {height: auto;}
+  .card-img { height: 250px;}
+}

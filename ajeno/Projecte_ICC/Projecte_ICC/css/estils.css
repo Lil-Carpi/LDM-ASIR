@@ -10,6 +10,98 @@ header {
 	margin: 0px 10px;
 	min-height: 80px;
 }
+.navbar
+{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    /*width: calc(100% - 2rem);*/
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer a
+{
+    color: white;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-right: 0;
+}
+
+@media (min-width: 768px){
+    .logoContainer a { font-size: 1.25rem; }
+    
+    .navbarLinks{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 1rem;
+    }
+
+    .navbarLinks li {
+        margin-left: 1.5rem;
+    }
+}
+.navbarLinks a
+{
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbarLinks a:hover{
+    color: #00c3ff;
+}
+
+/*=======Menu movil========*/
+#menu-toggle {display: none;}
+
+.hamburger-label
+{
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 767px){
+    .hamburger-label { display: block; }
+
+    .navbarLinks
+    {
+        position: absolute;
+        top: 6rem;
+        left: 1rem;
+        right: 1rem;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem;
+
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    #menu-toggle:checked ~ .navbarLinks {
+        display: flex;
+        animation: fadeIn 0.4s ease forwards;
+  }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
 
 main {
 	/* CLAVE: Hace que MAIN ocupe todo el espacio sobrante, empujando el footer hacia abajo. */

@@ -35,11 +35,65 @@
     </header>
 
     <main class="content">
-      <div class="main-container">
+      <section>
+        <h2 class="section-title">Cercar <span class="highlight-neon">Videojocs</span></h2>
 
-      </div>
+        <div class="register-wrapper">
+          <div class="glass-form-card">
+            <form action="indexSAD.html" method="get">
+
+              <div class="form-group">
+                <label for="edat" class="form-label">Edat del jugador</label>
+                <input type="range" id="edat" name="edat" class="form-input" min="3" max="18" oninput="this.nextElementSibling.value = this.value + ' anys'">
+                <output>12 anys</output>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Temàtica</label>
+                <div class="options-grid">
+                  <label class="option-label">
+                    <input type="radio" name="tematica" value="accio"> Acció
+                  </label>
+                  <label class="option-label">
+                    <input type="radio" name="tematica" value="rpg"> RPG
+                  </label>
+                  <label class="option-label">
+                    <input type="radio" name="tematica" value="esports"> Esports
+                  </label>
+                  <label class="option-label">
+                    <input type="radio" name="tematica" value="accio"> Aventura
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Requisits de maquinari</label>
+                <div class="options-grid">
+                  <label class="option-label">
+                    <input type="checkbox" name="req" value="8gb_ram"> 8GB RAM
+                  </label>
+                  <label class="option-label">
+                    <input type="checkbox" name="req" value="8gb_ram"> GPU Dedicada
+                  </label>
+                  <label class="option-label">
+                    <input type="checkbox" name="req" value="8gb_ram"> Disc SSD
+                  </label>
+                  <label class="option-label">
+                    <input type="checkbox" name="req" value="8gb_ram"> Windows 11
+                  </label>
+                </div>
+              </div>
+
+              <div class="buttons-container">
+                <input type="reset" value="Esborrar" class="btn-neon btn-reset">
+                <input type="submit" name="Cercar" class="btn-neon">
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
-
 
     <footer class="footer">
       <div class="container">

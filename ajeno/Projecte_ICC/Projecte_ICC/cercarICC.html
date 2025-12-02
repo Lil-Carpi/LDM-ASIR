@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JocsMania Cercar</title>
+	<link rel="icon" href="img/logo.png">
+	<link rel="stylesheet" href="css/estils.css">
+	<!-- Autor: Izan C. Cercós  Data: 22/11/2025 Resum: Pàgina amb cercador per cercar els videojocs amb els paràmetres com l'edat, temàtica o requisits tècnics, etc.-->
+</head>
+<body>
+	<!-- capçalera amb logo, títol, menú i enllaç a xarxes socials -->
+	<header>
+		<div class="cabecera">
+			<a href="indexICC.html"><img class="logo" src="img/logo.png"></a> 
+			<div class="title">JocsMania</div>
+			<div class="hamburger">&#9776;</div>
+			<div class="menu">
+				<a href="indexICC.html">Inici</a>
+				<a href="videojocsICC.html">Videojocs</a>
+				<a href="cercarICC.html">Cercar</a>
+				<a href="registreICC.html">Socis</a>
+			</div>
+			<div class="socials">
+				<a href="https://www.tiktok.com/login" target="_blank"><img class="red" src="img/tiktok.png"></a>
+				<a href="https://www.instagram.com" target="_blank"><img class="red" src="img/instagram.png"></a>
+			</div>
+		</div>
+	</header>
+	<!-- bloc principal amb cercador per cercar els videojocs amb els paràmetres com l'edat, temàtica o requisits tècnics -->
+	<main>
+		<section class="formulari">
+			<h1>Cercador</h1>
+			<!-- formulari per pujar les dades al servidor (no implementat: mostra la pàgina inicial) -->
+			<form action="indexICC.html">
+				<div class="campo">
+					<label class="etiqueta" for="nom">Nom:</label>
+					<input type="text" id="nom" name="nom">
+				</div>
+				<div class="campo">
+					<label class="etiqueta" for="edat">Edat del jugador:</label>
+					<!-- barra amb mínim 6 i màxim 99 per definir l'edat -->
+					<input type="range" id="edat" name="edat" min="6" max="99" title="Edat entre 6 i 99 anys">
+				</div>
+				<div class="campo">
+					<label class="etiqueta">Temàtica:</label>
+					<div class="valors">
+						<div>
+							<input type="radio" id="tematica1" name="tematica" value="fantasia">
+							<label class="valor" for="tematica1">Fantasía</label>
+						</div>
+						<div>
+							<input type="radio" id="tematica2" name="tematica" value="ciencia-ficcion">
+							<label class="valor" for="tematica2">Ciencia ficción</label class="valor">
+						</div>
+						<div>
+							<input type="radio" id="tematica3" name="tematica" value="terror">
+							<label class="valor" for="tematica3">Terror</label class="valor">
+						</div>
+						<div>
+							<input type="radio" id="tematica4" name="tematica" value="aventura">
+							<label class="valor" for="tematica4">Aventura</label class="valor">
+						</div>
+					</div>
+				</div>
+				<div class="campo">
+					<label class="etiqueta">Requisits:</label>
+					<div class="valors">
+						<div>
+							<input type="checkbox" id="requisit1" name="requisits" value="rato">
+							<label class="valor" for="requisit1">Rato</label class="valor">
+						</div>
+						<div>
+							<input type="checkbox" id="requisit2" name="requisits" value="camara">
+							<label class="valor" for="requisit2">Camara</label class="valor">
+						</div>
+						<div>
+							<input type="checkbox" id="requisit3" name="requisits" value="micro">
+							<label class="valor" for="requisit3">Micro</label class="valor">
+						</div>
+						<div>
+							<input type="checkbox" id="requisit4" name="requisits" value="comandament">
+							<label class="valor" for="requisit4">Comandament</label class="valor">
+						</div>
+					</div>
+				</div>
+				<div class="botones">
+					<input type="submit" value="Cercar">
+					<input type="reset" value="Esborrar">
+				<div class="campo">
+			</form>
+		</section>
+	</main>
+	<!-- peu de pàgina amb adreça, enllaç a política i enllaç a WhatsApp -->
+	<footer>
+		<div class="address">
+			<div class="addressTitle">Direcció</div>
+			<div>Ronda Frederic Mistral, 26</div>
+			<div>08304, Mataró </div>
+		</div>
+		
+		<div class="enlaces">
+			<div class="politica">
+				<a href="politicaICC.html">Política de privacitat</a>
+			</div>
+			<div>
+				<div class="mail"><a href="mailto:jocsmania@gmail.com">jocsmania@gmail.com</a></div class="mail">
+				<a href="https://www.whatsapp.com/?lang=es" target="_blank"><img class="red" src="img/whatsapp.png"></a>
+			</div>
+		</div>
+	</footer class="pie">
+	<script src="js/script.js"></script>
+</body>
+</html>

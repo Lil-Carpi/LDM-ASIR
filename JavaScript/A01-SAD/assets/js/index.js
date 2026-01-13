@@ -1,3 +1,4 @@
+// Boton de cambio de tema
 const root = document.documentElement;
 const toggleBtn = document.getElementById("theme-toggle");
 
@@ -13,3 +14,6 @@ toggleBtn.addEventListener("click", () => {
   root.dataset.theme = next;
   localStorage.setItem("theme", next);
 });
+
+
+document.getElementById(act01).innerHTML="Hola"

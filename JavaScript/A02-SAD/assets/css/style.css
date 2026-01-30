@@ -7,9 +7,15 @@
     list-style: none;
     text-decoration: none;
 }
+@font-face {
+  font-family: "DepartureMonoFont";
+  src: url(../fonts/DepartureMonoNerdFont-Regular.otf);
+}
+
 body
 {
-    font-family: 'Manjari', sans-serif;
+    /*font-family: 'Manjari', sans-serif;*/
+    font-family: 'DepartureMonoFont'; 
     background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
     min-height: 100vh;

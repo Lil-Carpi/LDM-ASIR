@@ -5,43 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JocsMania - Inici</title>
     <link href="assets/css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" href="assets/img/favicon.png">
+    <script src="assets/js/index.js" defer></script>
   </head>
   <body>
 
     <header>
-      <!--
       <nav class="navbar">
         <div class="logoContainer">
           <a href="indexSAD.html"><i class="fa-solid fa-gamepad"></i></a>
           <a href="indexSAD.html">JocsMania</a>
         </div>
 
-        <input type="checkbox" id="menu-toggle">
+        <!--Antes aqui habia un input, ahora va el div para el js-->
         
-          <label for="menu-toggle" class="hamburger-label">
+          <div class="hamburger-label" id="menu-btn">
             <i class="fa-solid fa-bars"></i>
-        </label>
+          </div>
 
-        <ul class="navbarLinks">
+        <ul class="navbarLinks" id="navLinks">
           <li><a href="indexSAD.html">Inici</a></li>
           <li><a href="videojocsSAD.html">Videojocs</a></li>
           <li><a href="cercarSAD.html">Cercar</a></li>
           <li><a href="socisSAD.html">Socis</a></li>
-          <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a></li>
+          <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
         </ul>
       </nav>
-      -->
-      <nav class="navbar">
 
         
-      </nav>
     </header>
 
     <main class="content">
+
+      <section class="slider-section">
+        <div class="slider-container">
+          <div class="slide active">
+            <img src="assets/img/elden_ring.jpg" alt="Elden Ring Banner">
+            <div class="slide-caption">
+              <h3>Elden Ring</h3>
+              <p>T'animes a entrar a un món perillós?</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="assets/img/fc24.jpg" alt="FC24 Banner">
+            <div class="slide-caption">
+              <h3>EA Sports FC 24</h3>
+              <p>Sent el joc. Sent la passió.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="assets/img/zeldatotk.jpg" alt="Zelda Banner">
+            <div class="slide-caption">  
+              <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+              <p>Una aventura que toca el cel.</p>
+            </div>
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-btn play-pause-btn" id="toggle-play">
+              <i class="fa-solid fa-pause"></i>            
+            </button>
+            <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+
+        </div>
+      </section>
+
+
+
 
       <section class="top-sales-section">
         <h2 class="section-title">Top 3 vendes<span class="highlight-neon">Setmanals</span></h2>
@@ -117,7 +151,7 @@
           <div class="footerLinks">
             <h4>Xarxes socials</h4>
             <div class="socialLinks">
-              <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://www.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
           </div>
 

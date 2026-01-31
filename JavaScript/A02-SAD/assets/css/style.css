@@ -82,7 +82,7 @@ body
 }
 
 /*=======Menu movil========*/
-#menu-toggle {display: none;}
+/*#menu-toggle {display: none;}*/
 
 .hamburger-label
 {
@@ -90,6 +90,7 @@ body
     font-size: 1.5rem;
     color: white;
     cursor: pointer;
+    user-select: none;
 }
 
 @media (max-width: 767px){
@@ -113,15 +114,30 @@ body
         border-radius: 20px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
-    #menu-toggle:checked ~ .navbarLinks {
+    /*#menu-toggle:checked ~ .navbarLinks {
         display: flex;
         animation: fadeIn 0.4s ease forwards;
-  }
+  }*/
+    .navbarLinks.active {
+      display: flex;
+      animation: fadeIn 0.4s ease forwards;
+    }
+    .navbarLinks.closing {
+      display: flex;
+      animation: fadeOut 0.4s ease forwards;
+      pointer-events: none;
+    }
 }
+
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
 }
 
 /*======Footer======*/
@@ -272,6 +288,171 @@ body
   margin: 0 auto;
 }
 
+/*========SLIDER=======*/
+
+.slider-section
+{
+  width: 100%;
+  margin-bottom: 4rem;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.slider-container
+{
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background: #0F172A;
+  overflow: hidden;
+}
+
+.slide
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.slide.active
+{
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: brightness(0.6);
+}
+.slider-container:hover .slide.active img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.slide-caption
+{
+  position: absolute;
+  bottom: 5%;
+  left: 1%;
+  color: white;
+  z-index: 10;
+  max-width: 500px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(0,0,0,0.2);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+  padding: 1.5rem;
+  border-radius: 50px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s ease 0.3;
+}
+.slide.active .slide-caption
+{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.slide-caption h3
+{
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #00C3FF;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 195, 255, 0.3);
+}
+
+.slide-caption p
+{
+  font-size: 1.2rem;
+  color: #E2E8F0;
+}
+
+.slider-controls
+{
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.slider-btn
+{
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+.slider-btn:hover 
+{
+  background: #00C3FF;
+  color: #0F172A;
+  border-color: #00C3FF;
+  box-shadow: 0 0 15px #00C3FF;
+  transform: scale(1.1);
+}
+
+.play-pause-btn 
+{
+  border-color: #00C3FF;
+  color: #00C3FF;
+}
+
+.play-pause-btn:hover
+{
+  background: #00C3FF;
+  color: #0F172A;
+}
+
+
+@media (max-width: 768px) {
+  .slider-container { height: 350px; }
+  .slide-caption {
+    left: 1px;
+    bottom: 5rem;
+    right: 1rem;
+    padding: 1rem;
+  }
+  .slider-controls {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 1rem;
+    width: max-content;
+  }
+  .slide-caption h3 { font-size: 1rem; }
+  .slide-caption p { font-size: 0.8rem; }
+}
+
+/*=====================*/
 .section-title
 {
   font-size: 2.5rem;
@@ -630,7 +811,7 @@ body
   width: 100%;
   padding: 12px 15px;
   background: rgba(15, 23, 42, 0.6);
-  border: 1ox solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   color: white;
   font-family: 'Manjari', sans-serif;

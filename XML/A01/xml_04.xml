@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<list>
+  <cd>
+    <artist>The spammers</artist>
+    <title>Here we go</title>
+    <price>10</price>
+  </cd>
+  <cd>
+    <artist>Crosby, Stills, Nash &amp; Young</artist>
+    <title>Greatest Hits</title>
+    <price>10</price>
+  </cd>
+</list>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<comments>
+  <comment num="1">
+    <author>Peter G.</author>
+    <text>I like &lt;&lt;&lt;Rock &amp; Roll &gt;&gt;&gt;</text>
+  </comment>
+  <comment num="2">
+    <author>James A.</author>
+    <text><![CDATA[ I don't like <<<Rock & Roll>>> ]]></text>
+  </comment>
+</comments>

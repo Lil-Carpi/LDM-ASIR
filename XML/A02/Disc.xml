@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cancion>
+   <Titulo>Gabinete Caligari-Solo Se Vive Una Vez</Titulo>
+   <Sello>EMI</Sello>
+   <Formato>Vinilo 45 RPM</Formato>
+   <País>Spain</País>
+   <Publicado>1990</Publicado>
+   <Género>Rock</Género>
+   <ListaDeTitulos>
+       <titulo_1 Pista="A1">
+           <Nombre>Solo Se Vive Una Vez</Nombre>
+           <Duración>2:31</Duración>
+       </titulo_1>
+       <titiño_2 Pista="A2">
+           <Nombre>Camino Soria</Nombre>
+           <Duracion>6:10</Duracion>
+       </titulo_2>
+       <titulo_3 Pista="B1">
+           <Nombre>La Culpa Fue Del CHa Cha CHa </Nombre>
+           <Duracio>3:34</Duracio>
+       </titulo_3>
+       <titulo_4 Pista="B2">
+           <Nombre>Suite Nupcial</Nombre>
+           <Duración>3:18</Duración>
+       </titulo_4>
+   </ListaDeTitulos>
+</cancion>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Libro>
+    <titulo>EL ASEDIO</titulo>
+    <nPáginas>816</nPáginas>
+    <Editorial>DEBOLSILLO<Editorial>
+    <Idioma>CASTELLANO<Idioma>
+    <Encuadernacion>Tapa blanda</Encuadernacion>
+    <ISBN>9788490626610</ISBN>
+    <AñoDeEdicion>2021</AñoDeEdicion>
+    <PlazaDeEdicion>ES</PlazaDeEdicion>
+    <FechaDeLanzamiento>27/05/2021</FechaDeLanzamiento>
+</Libro>

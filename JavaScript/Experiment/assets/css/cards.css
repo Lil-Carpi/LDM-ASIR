@@ -1,0 +1,77 @@
+/* =========================================
+   ESTILOS ESPECÍFICOS PARA LAS TARJETAS GLASS
+   ========================================= */
+
+/* 1. Hacemos que el wrapper del web component ocupe el 100% de la celda del grid */
+.ranking-grid glass-element {
+    display: flex; /* Para que el hijo se estire */
+    height: 100%;
+    width: 100%;
+}
+
+/* 2. Clase especial para "vaciar" las tarjetas originales */
+.rank-card.glass-card-inner {
+    /* Quitamos el fondo oscuro original para que se vea el cristal */
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    
+    /* Quitamos el transform original porque el glass-element ya tiene su propia animación */
+    transform: none !important; 
+    height: 100%; /* Que ocupe todo el espacio del cristal */
+}
+
+/* 3. También quitamos el fondo de la parte del texto (.card-content) */
+.glass-card-inner .card-content {
+    background: transparent !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Mantenemos una linea sutil */
+}
+
+/* 4. Ajuste para que la imagen no tape el borde redondeado del cristal */
+.glass-card-inner .card-img {
+    border-radius: 20px 20px 0 0; /* Coincidir con el radio del glass-element */
+    /* La imagen necesita opacidad o mezcla para que el efecto pase a través? 
+       No necesariamente, el filtro 'displacement' deforma la imagen en sí. */
+}
+
+/* 5. Color del texto para asegurar legibilidad sobre el cristal */
+.glass-card-inner h3,
+.glass-card-inner p {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8); /* Sombra fuerte para leer bien sobre fondos transparentes */
+}
+/* EL CONTENEDOR DE FONDO */
+.animated-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1; /* Detrás de todo */
+    background: #0f172a;
+    overflow: hidden;
+}
+
+/* LAS BOLAS DE LUZ */
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px); /* Desenfoque bestia */
+    opacity: 0.6;
+    animation: floatOrb 10s infinite alternate ease-in-out;
+}
+
+.orb-1 {
+    width: 400px; height: 400px;
+    background: #ff0055; /* Rosa neón */
+    top: 10%; left: 20%;
+}
+
+.orb-2 {
+    width: 500px; height: 500px;
+    background: #00c3ff; /* Azul neón */
+    bottom: 10%; right: 20%;
+    animation-delay: -5s; /* Para que vaya a destiempo */
+}
+
+/* ANIMACIÓN PARA QUE SE MUEVAN SOLAS */
+@keyframes floatOrb {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, 100px) scale(1.5); }
+}

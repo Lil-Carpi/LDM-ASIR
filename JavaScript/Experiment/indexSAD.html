@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JocsMania - Inici</title>
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/cards.css">
+    <link rel="icon" href="assets/img/favicon.png" />
+    <script src="assets/js/index.js" defer></script>
+
+  </head>
+  <body>
+    <div class="animated-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+    <header>
+      <glass-element auto-size radius="25" blur="8" depth="30" strength="30" chromatic-aberration="8" style="position: fixed; top: 1rem; left: 1rem; right: 1rem; z-index: 100;">
+        <nav class="navbar">
+          <div class="logoContainer">
+            <a href="indexSAD.html"><i class="fa-solid fa-gamepad"></i></a>
+            <a href="indexSAD.html">JocsMania</a>
+          
+          </div>
+
+          <!--Antes aqui habia un input, ahora va el div para el js-->
+
+          <div class="hamburger-label" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+
+          <ul class="navbarLinks" id="navLinks">
+            <li><a href="indexSAD.html">Inici</a></li>
+            <li><a href="videojocsSAD.html">Videojocs</a></li>
+            <li><a href="cercarSAD.html">Cercar</a></li>
+            <li><a href="socisSAD.html">Socis</a></li>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com" target="_blank"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </glass-element>
+    </header>
+
+    <main class="content">
+        <h2 class="section-title">
+          Nomes funciona amb els navegadors<span class="highlight-neon">Chrome</span>
+        </h2>
+        <p class="section-title">Es una versió <span class="highlight-neon">experimental</span>. Espereu un mal comportament.</p>
+      <section class="slider-section">
+        <div class="slider-container">
+          <div class="slide active">
+            <img src="assets/img/elden_ring.jpg" alt="Elden Ring Banner" />
+            <div class="slide-caption">
+              <h3>Elden Ring</h3>
+              <p>T'animes a entrar a un món perillós?</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="assets/img/fc24.jpg" alt="FC24 Banner" />
+            <div class="slide-caption">
+              <h3>EA Sports FC 24</h3>
+              <p>Sent el joc. Sent la passió.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="assets/img/zeldatotk.jpg" alt="Zelda Banner" />
+            <div class="slide-caption">
+              <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+              <p>Una aventura que toca el cel.</p>
+            </div>
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-btn prev-btn">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn play-pause-btn" id="toggle-play">
+              <i class="fa-solid fa-pause"></i>
+            </button>
+            <button class="slider-btn next-btn">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="top-sales-section">
+        <h2 class="section-title">
+          Top 3 vendes<span class="highlight-neon">Setmanals</span>
+        </h2>
+
+        <div class="ranking-grid">
+          <article class="rank-card rank-1">
+            <div class="rank-badge">#1</div>
+            <img
+              class="card-img"
+              src="assets/img/elden_ring.jpg"
+              alt="Elden Ring"
+            />
+            <div class="card-content">
+              <span class="genre-tag">RPG / Acció</span>
+              <h3>Elden Ring</h3>
+              <p class="description">
+                L'obra mestra de món obert. Un món vast i perillós on cada racó
+                amaga un nou desafiament.
+              </p>
+            </div>
+            <div id="contador">
+              <p id="card-contador"></p>
+            </div>
+          </article>
+
+          <article class="rank-card rank-2">
+            <div class="rank-badge">#2</div>
+            <img class="card-img" src="assets/img/fc24.jpg" alt="EA FC 24" />
+            <div class="card-content">
+              <span class="genre-tag">Esports / Simulació</span>
+              <h3>EA FC 24</h3>
+              <p class="description">
+                El rei del futbol torna. Realisme pur amb HyperMotionV i
+                integració total del futbol femení.
+              </p>
+            </div>
+          </article>
+
+          <article class="rank-card rank-3">
+            <div class="rank-badge">#3</div>
+            <img
+              class="card-img"
+              src="assets/img/zeldatotk.jpg"
+              alt="Zelda: TOTK"
+            />
+            <div class="card-content">
+              <span class="genre-tag">Aventura / Puzzle</span>
+              <h3>Zelda: TOTK</h3>
+              <p class="description">
+                Creativitat sense límits. Construeix, vola i explora Hyrule com
+                mai abans.
+              </p>
+            </div>
+          </article>
+        </div>
+
+<section class="top-sales-section">
+  <h2 class="section-title">Zona de <span class="highlight-neon">Pruebas Glass</span></h2>
+
+  <div class="ranking-grid">
+
+    <glass-element 
+        auto-size 
+        radius="20" 
+        blur="5" 
+        strength="30" 
+        chromatic-aberration="10" 
+        depth="40"
+    >
+        <article class="rank-card glass-card-inner">
+            <div class="rank-badge">#1</div>
+            <img class="card-img" src="assets/img/elden_ring.jpg" alt="Elden Ring">
+            <div class="card-content">
+                <span class="genre-tag">RPG / Acció</span>
+                <h3>Elden Ring</h3>
+                <p class="description">Modo: EXTREMO. Haz click para ver la deformación líquida.</p>
+            </div>
+        </article>
+    </glass-element>
+
+    <glass-element 
+        auto-size 
+        radius="20" 
+        blur="8" 
+        strength="15" 
+        chromatic-aberration="5" 
+        depth="20"
+    >
+        <article class="rank-card glass-card-inner">
+            <div class="rank-badge">#2</div>
+            <img class="card-img" src="assets/img/fc24.jpg" alt="EA FC 24">
+            <div class="card-content">
+                <span class="genre-tag">Esports / Simulació</span>
+                <h3>EA FC 24</h3>
+                <p class="description">Modo: MEDIO. Un balance perfecto entre legibilidad y efecto.</p>
+            </div>
+        </article>
+    </glass-element>
+
+    <glass-element 
+        auto-size 
+        radius="20" 
+        blur="10" 
+        strength="5" 
+        chromatic-aberration="2" 
+        depth="10"
+    >
+        <article class="rank-card glass-card-inner">
+            <div class="rank-badge">#3</div>
+            <img class="card-img" src="assets/img/zeldatotk.jpg" alt="Zelda: TOTK">
+            <div class="card-content">
+                <span class="genre-tag">Aventura / Puzzle</span>
+                <h3>Zelda: TOTK</h3>
+                <p class="description">Modo: SUTIL. Solo un toque de cristal elegante.</p>
+            </div>
+        </article>
+    </glass-element>
+
+  </div>
+</section>
+
+        <div class="cta-section">
+          <div class="cta-card">
+            <i class="fa-solid fa-layer-group cta-icon"></i>
+            <h3>Vols veure el catàleg complet?</h3>
+            <p>Tenim una gran varietat de jocs per a tots els gustos.</p>
+            <a href="videojocsSAD.html" class="btn-neon"
+              >Veure Catàleg Complet</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top: 5rem;">
+  <div class="ranking-grid">
+
+    <glass-element auto-size animated radius="30" blur="3" strength="40" chromatic-aberration="15" depth="40">
+        <article class="rank-card glass-card-inner">
+            <div class="rank-badge">>:D</div>
+            <img class="card-img" src="assets/img/elden_ring.jpg" alt="Elden Ring">
+            <div class="card-content">
+                <h3>Alto Máximo</h3>
+                <p>Efecto animado y muy fuerte.</p>
+            </div>
+        </article>
+    </glass-element>
+
+    <glass-element auto-size radius="20" blur="5" strength="30" chromatic-aberration="20" depth="20">
+        <article class="rank-card glass-card-inner">
+            <div class="rank-badge">⚡</div>
+            <img class="card-img" src="assets/img/fc24.jpg" alt="FC 24">
+            <div class="card-content">
+                <h3>Máximo</h3>
+                <p>Aberración cromática al máximo.</p>
+            </div>
+        </article>
+    </glass-element>
+
+  </div>
+</section>
+    </main>
+
+    <footer class="footer">
+      <glass-element auto-size radius="25" blur="8" depth="30" strength="10" chromatic-aberration="8" style="display: block; margin: 20px;">
+      <div class="container">
+        <div class="footerRow">
+          <div class="footerLinks">
+            <h4>Contactes</h4>
+            <ul>
+              <li><a href="nosaltresSAD.html">Sobre nosaltres</a></li>
+              <li>
+                <a href="https://maps.app.goo.gl/Eucdw56tTZbn8KnH7"
+                  >A on som? (08304)</a
+                >
+              </li>
+              <li><a href="politicaSAD.html">Política de privadesa</a></li>
+            </ul>
+          </div>
+          <div class="footerLinks">
+            <h4>Socis</h4>
+            <ul>
+              <li><a href="socisSAD.html">Vols ser-ne soci?</a></li>
+              <li><a href="videojocsSAD.html">Qué oferim?</a></li>
+              <li>
+                <a href="mailto:contacte@jocsmania.cat"
+                  >Contacta amb nosaltres</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footerLinks">
+            <h4>Xarxes socials</h4>
+            <div class="socialLinks">
+              <a href="https://www.whatsapp.com/" target="_blank"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="creativeCommons">
+            <a href="https://lilcarpi.xyz">lilcarpi.xyz</a> © 2025 by
+            <a href="https://lilcarpi.xyz">Lil_Carpi</a> is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+              >CC BY-NC-SA 4.0</a
+            ><img
+              src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
+              alt=""
+              style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+            /><img
+              src="https://mirrors.creativecommons.org/presskit/icons/by.svg"
+              alt=""
+              style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+            /><img
+              src="https://mirrors.creativecommons.org/presskit/icons/nc.svg"
+              alt=""
+              style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+            /><img
+              src="https://mirrors.creativecommons.org/presskit/icons/sa.svg"
+              alt=""
+              style="max-width: 1em; max-height: 1em; margin-left: 0.2em"
+            />
+          </div>
+        </div>
+      </div>
+    </glass-element>
+    </footer>
+    <svg width="0" height="0" style="position: absolute">
+      <filter id="liquid-glass-filter">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.015"
+          numOctaves="2"
+          seed="2"
+          result="noise"
+        />
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="noise"
+          scale="40"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        />
+        <feGaussianBlur stdDeviation="2" />
+      </filter>
+    </svg>
+  </body>
+      <script src="assets/js/glass-element.js" defer></script>
+</html>

@@ -1,0 +1,41 @@
+<!-- DTD generado para XML/A02/Disc.xml -->
+<!-- Define la estructura del elemento raíz 'cancion' y sus componentes -->
+<!ELEMENT cancion (Titulo, Sello, Formato, País, Publicado, Género, ListaDeTitulos)>
+<!-- 'Titulo': título del disco/canción -->
+<!ELEMENT Titulo (#PCDATA)>
+<!-- 'Sello': sello discográfico -->
+<!ELEMENT Sello (#PCDATA)>
+<!-- 'Formato': formato físico o digital -->
+<!ELEMENT Formato (#PCDATA)>
+<!-- 'País': país de publicación -->
+<!ELEMENT País (#PCDATA)>
+<!-- 'Publicado': año o texto de publicación -->
+<!ELEMENT Publicado (#PCDATA)>
+<!-- 'Género': género musical -->
+<!ELEMENT Género (#PCDATA)>
+<!-- 'ListaDeTitulos': contenedor de los títulos (en el XML hay títulos numerados) -->
+<!ELEMENT ListaDeTitulos (titulo_1, titulo_2, titulo_3, titulo_4)>
+<!-- 'titulo_1': primer tema, tiene atributo 'Pista' y contiene Nombre y Duración -->
+<!ELEMENT titulo_1 (Nombre, Duración)>
+<!-- atributo 'Pista' de 'titulo_1', obligatorio, indica la cara/pista -->
+<!ATTLIST titulo_1 Pista CDATA #REQUIRED>
+<!-- 'titulo_2': segundo tema, tiene atributo 'Pista' y contiene Nombre y Duracion (sin acento) -->
+<!ELEMENT titulo_2 (Nombre, Duracion)>
+<!-- atributo 'Pista' de 'titulo_2' -->
+<!ATTLIST titulo_2 Pista CDATA #REQUIRED>
+<!-- 'titulo_3': tercer tema, tiene atributo 'Pista' y contiene Nombre y Duracio (variante tipográfica) -->
+<!ELEMENT titulo_3 (Nombre, Duracio)>
+<!-- atributo 'Pista' de 'titulo_3' -->
+<!ATTLIST titulo_3 Pista CDATA #REQUIRED>
+<!-- 'titulo_4': cuarto tema, tiene atributo 'Pista' y contiene Nombre y Duración -->
+<!ELEMENT titulo_4 (Nombre, Duración)>
+<!-- atributo 'Pista' de 'titulo_4' -->
+<!ATTLIST titulo_4 Pista CDATA #REQUIRED>
+<!-- 'Nombre': nombre de la pista -->
+<!ELEMENT Nombre (#PCDATA)>
+<!-- 'Duración' (con acento): duración de la pista, tal como aparece en algunas entradas -->
+<!ELEMENT Duración (#PCDATA)>
+<!-- 'Duracion' (sin acento): variante sin acento encontrada en el XML -->
+<!ELEMENT Duracion (#PCDATA)>
+<!-- 'Duracio' (sin tilde ni n): otra variante tipográfica presente en el XML -->
+<!ELEMENT Duracio (#PCDATA)>

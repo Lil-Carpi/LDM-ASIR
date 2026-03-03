@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<asociaciones>
+  <asociacion registro="R-185" cif="G-30525976">
+    <nombre>Asociacion de Amigos del Pueblo Saharaui</nombre>
+    <direccion cp="30800">C/Eugenio Ubeda,17 7ºk</direccion>
+    <telefono>619370416</telefono>
+    <fconstitucion />
+  </asociacion>
+  <asociacion registro="R-209" cif="G-73231946">
+    <nombre>Asociación "Atenea" Promoción y Desarrollo Social</nombre>
+    <direccion cp="30800">C/ Granero, Edificio Armonía, nº 3, 1º A</direccion>
+    <telefono>677423407</telefono>
+    <fconstitucion>2003-03-18</fconstitucion>
+  </asociacion>
+  <asociacion registro="R-237" cif="G-30365035">
+    <nombre>Asociación "Misión Río Lindo"</nombre>
+    <direccion cp="30800">Avda. Juan Carlos I, nº 42. Esc. B. Pl 3ª</direccion>
+    <fconstitucion>1993-05-17</fconstitucion>
+  </asociacion>
+  <asociacion registro="R-247" cif="G-28382406">
+    <nombre>UNICEF - COMITÉ ESPAÑOL</nombre>
+    <direccion cp="30800">Alameda Fajardo el Bravo </direccion>
+    <telefono>968470188</telefono>
+    <fconstitucion>2001-11-29</fconstitucion>
+  </asociacion>
+  <asociacion registro="R-121" cif="G-73011447">
+    <nombre>Familias Solidarias con el Pueblo Bielorruso</nombre>
+    <direccion cp="30800">C/ Eugenio Úbeda -Edifico Cruz Roja- , nº 7</direccion>
+    <telefono>647368860</telefono>
+    <email>familiassolidarias@lorca.es</email>
+    <fconstitucion>2004-04-13</fconstitucion>
+  </asociacion>
+  <asociacion registro="R-160" cif="F-73067670">
+    <nombre>Federación de Asociaciones Familias Solidarias</nombre>
+    <direccion cp="30800">Alameda de Cervantes, Centro Social Paso a Nivel</direccion>
+    <fconstitucion />
+  </asociacion>
+  <asociacion registro="R-382" cif="G-73568388">
+    <nombre>Asociación Socioeducativa ALDEA ACTIVA</nombre>
+    <direccion cp="30800">Alameda de Cervantes, 16 - 8º C</direccion>
+    <telefono>666005123</telefono>
+    <fconstitucion>2007-12-19</fconstitucion>
+  </asociacion>
+  <asociacion registro="R-372" cif="G-30485858">
+    <nombre>Asociación "Instituto de Desarrollo Comunitario de Murcia"</nombre>
+    <direccion cp="30800">C/ Lope Gisbert, nº 18</direccion>
+    <telefono>968257466</telefono>
+    <email>mercedes.idc@gmail.com</email>
+    <fax>968351290</fax>
+    <fconstitucion>1995-01-13</fconstitucion>
+  </asociacion>
+  <asociacion registro="R-496" cif="G-73721565">
+    <nombre>Asociación Ghaneses de Lorca</nombre>
+    <direccion cp="30800">Camino Viejo del Puerto, 52, Bj.</direccion>
+    <telefono>663729509</telefono>
+    <email>ghanalorca@yahoo.es</email>
+    <fconstitucion />
+  </asociacion>
+</asociaciones>

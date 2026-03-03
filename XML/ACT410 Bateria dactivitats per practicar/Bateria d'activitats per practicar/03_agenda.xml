@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda>
+  <contacto>
+    <nombre>J. Ramírez</nombre>
+    <telefonos>
+      <fijo>932756134</fijo>
+    </telefonos>
+  </contacto>
+  <contacto>
+    <nombre>Reparaciones del Hogar</nombre>
+    <telefonos>
+      <movil>634576834</movil>
+      <fijo>936876264</fijo>
+      <movil>621347536</movil>
+    </telefonos>
+    <email>reparaciones@gmail.com</email>
+  </contacto>
+</agenda>

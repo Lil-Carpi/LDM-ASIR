@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<albara>
+  <numero>5</numero>
+  <data>2011-10-02</data>
+  <client cid="c1">
+    <nom>Pere Garcia</nom>
+    <poblacio>Figueres</poblacio>
+  </client>
+  <articles>
+    <compra>
+      <article codi="a12">
+        <descripcio>Vi negre Rioja reserva. Marques de Riscal 75 cl</descripcio>
+        <ampolla />
+        <preu>12.85</preu>
+      </article>
+      <quantitat>2</quantitat>
+    </compra>
+    <compra>
+      <article codi="a19">
+        <descripcio>Vi blanc. Viña Serea 75 cl</descripcio>
+        <ampolla />
+        <preu>0.85</preu>
+      </article>
+      <quantitat>15</quantitat>
+      <descompte>5%</descompte>
+    </compra>
+    <compra>
+      <article codi="a32">
+        <descripcio>Vi a granel</descripcio>
+        <granel />
+        <preu>0.10</preu>
+      </article>
+      <quantitat>5</quantitat>
+    </compra>
+  </articles>
+</albara>

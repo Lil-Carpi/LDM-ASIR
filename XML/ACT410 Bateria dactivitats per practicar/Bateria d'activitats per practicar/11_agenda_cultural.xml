@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<agenda>
+  <acto id="act_1962">
+    <titulo>LAS TRES PLAZAS</titulo>
+    <fechainicio dia="12" mes="09" año="2016" />
+    <fechafin dia="22" mes="12" año="2016" />
+    <gps longitud="-1.69908396078267" latitud="37.6767854617011" />
+  </acto>
+  <acto id="act_2027">
+    <titulo>EL LIBRO DE LA SELVA, LA AVENTURA DE MOWGLI, EL MUSICAL</titulo>
+    <fechainicio dia="14" mes="10" año="2016" />
+    <fechafin dia="16" mes="10" año="2016" />
+    <gps longitud="-1.69859579874196" latitud="37.6733038382908" />
+  </acto>
+  <acto id="act_2033">
+    <titulo>EL GATO CON BOTAS</titulo>
+    <fecha dia="15" mes="10" año="2016" />
+    <gps longitud="-1.69942460132756" latitud="37.6352670823881" />
+  </acto>
+  <acto id="act_2030">
+    <titulo>COTI</titulo>
+    <fecha dia="20" mes="10" año="2016" />
+    <gps longitud="-1.6985957987419624" latitud="37.673303838290835" />
+  </acto>
+  <acto id="act_2034">
+    <titulo>EL FLAUTISTA DE HAMELÍN</titulo>
+    <fecha dia="22" mes="10" año="2016" />
+    <gps longitud="-1.69942460132756" latitud="37.6352670823881" />
+  </acto>
+  <acto id="act_2036">
+    <titulo>TALLER DE TORNO Y PINTURA EN CERÁMICA</titulo>
+    <fechainicio dia="20" mes="10" año="2016" />
+    <fechafin dia="22" mes="10" año="2016" />
+    <gps longitud="-1.6982873447052498" latitud="37.670467468227457" />
+  </acto>
+  <acto id="act_2028">
+    <titulo>EL PEQUEÑO PONI</titulo>
+    <fecha dia="27" mes="10" año="2016" />
+    <gps longitud="-1.69859579874196" latitud="37.6733038382908" />
+  </acto>
+  <acto id="act_2031">
+    <titulo>LOS SABANDEÑOS</titulo>
+    <fechainicio dia="28" mes="10" año="2016" />
+    <fechafin dia="29" mes="10" año="2016" />
+    <gps longitud="-1.6985957987419624" latitud="37.673303838290835" />
+  </acto>
+  <acto id="act_2035">
+    <titulo>MAGIA CON ENRIQUE LEÓN</titulo>
+    <fecha dia="29" mes="10" año="2016" />
+    <gps longitud="-1.69942460132756" latitud="37.6352670823881" />
+  </acto>
+  <acto id="act_2032">
+    <titulo>DON JUAN TENORIO</titulo>
+    <fechainicio dia="06" mes="11" año="2016" />
+    <fechafin dia="11" mes="11" año="2016" />
+    <gps longitud="-1.6985957987419624" latitud="37.673303838290835" />
+  </acto>
+</agenda>

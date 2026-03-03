@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE llibreCuina SYSTEM "act404_SAD.dtd">
+
+
+<llibreCuina>
+    <recepta id="R001" titol="Albergineres farcides">
+       <ingredients>
+           <ingredient ref="I001">
+               carn picada <quantitat>500g</quantitat>
+           </ingredient>
+           <ingredient ref="I002">
+               albarginia <quantitat>4 unitats</quantitat>
+           </ingredient>
+       </ingredients>
+       <pasos>
+           <pas>Cuinar la carn</pas>
+           <pas>Cuinar alberginies</pas>
+       </pasos>
+    <tipusCuina>Mediterrània</tipusCuina>
+       <restaurants>
+           <restaurant idRest="RES01">
+               <nom>Can Cuina</nom>
+               <carrer>Carrer Major</carrer>
+               <nombre>10</nombre>
+               <ciutat>Barcelona</ciutat>
+           </restaurant>
+       </restaurants>
+   </recepta>
+    <recepta id="R002" titol="Patates fregides">
+       <ingredients>
+           <ingredient ref="I003">
+               patates <quantitat>1kg</quantitat>
+           </ingredient>
+           <ingredient ref="I004">
+               oli <quantitat>al gust</quantitat>
+           </ingredient>
+       </ingredients>
+       <pasos>
+           <pas>Pelar i tallar patates</pas>
+           <pas>Fregir patates</pas>
+       </pasos>
+    <tipusCuina>Ràpida</tipusCuina>
+       <restaurants>
+           <restaurant>
+               <nom>El Racó de la Patata</nom>
+               <ciutat>Girona</ciutat>
+           </restaurant>
+       </restaurants>
+   </recepta>
+</llibreCuina>

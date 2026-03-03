@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Cancion>
+<cancion>
    <Titulo>Gabinete Caligari-Solo Se Vive Una Vez</Titulo>
    <Sello>EMI</Sello>
    <Formato>Vinilo 45 RPM</Formato>
@@ -11,7 +11,7 @@
            <Nombre>Solo Se Vive Una Vez</Nombre>
            <Duración>2:31</Duración>
        </titulo_1>
-       <titiño_2 Pista="A2">
+       <titulo_2 Pista="A2">
            <Nombre>Camino Soria</Nombre>
            <Duracion>6:10</Duracion>
        </titulo_2>

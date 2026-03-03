@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+
+NOTAS:
+
+- Los idiomas posibles son : es,cat,en,fr
+- Los niveles posibles son : inicial, medio, avanzado
+
+-->
+
+<curso web="http://www.uni.es/cursos/sw" idioma="es" nivel="avanzado">
+  <titulo>Servicios Web</titulo>
+  <profesor>
+    <nombre>Francisco</nombre>
+    <apellidos>Dueñas Gato</apellidos>
+  </profesor>
+  <alumnos>
+    <alumno inscripcion="A001">
+      <nombre>Maite</nombre>
+      <apellidos>Mata Sala</apellidos>
+      <nota>5</nota>
+      <email>matasala@uni.es</email>
+      <aprobado />
+    </alumno>
+    <alumno inscripcion="A002">
+      <nombre>Kiko</nombre>
+      <apellidos>Soto Blanco</apellidos>
+      <nota>6</nota>
+      <aprobado />
+    </alumno>
+    <alumno inscripcion="A003
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+">
+      <nombre>Leo</nombre>
+      <apellidos>Rojo Fuerte</apellidos>
+      <nota>3</nota>
+      <email>leoleo@uni.es</email>
+      <suspenso />
+    </alumno>
+  </alumnos>
+</curso>

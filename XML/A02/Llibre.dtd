@@ -1,0 +1,21 @@
+<!-- DTD generado para XML/A02/Llibre.xml -->
+<!-- Define la estructura del elemento raíz 'Libro' que contiene los campos del libro en orden -->
+<!ELEMENT Libro (titulo, nPáginas, Editorial, Idioma, Encuadernacion, ISBN, AñoDeEdicion, PlazaDeEdicion, FechaDeLanzamiento)>
+<!-- 'titulo': título del libro como texto -->
+<!ELEMENT titulo (#PCDATA)>
+<!-- 'nPáginas': número de páginas, representado como texto -->
+<!ELEMENT nPáginas (#PCDATA)>
+<!-- 'Editorial': nombre de la editorial -->
+<!ELEMENT Editorial (#PCDATA)>
+<!-- 'Idioma': idioma del libro -->
+<!ELEMENT Idioma (#PCDATA)>
+<!-- 'Encuadernacion': tipo de encuadernación del libro -->
+<!ELEMENT Encuadernacion (#PCDATA)>
+<!-- 'ISBN': código ISBN del libro -->
+<!ELEMENT ISBN (#PCDATA)>
+<!-- 'AñoDeEdicion': año de la edición (texto) -->
+<!ELEMENT AñoDeEdicion (#PCDATA)>
+<!-- 'PlazaDeEdicion': plaza o país de edición -->
+<!ELEMENT PlazaDeEdicion (#PCDATA)>
+<!-- 'FechaDeLanzamiento': fecha de lanzamiento (texto) -->
+<!ELEMENT FechaDeLanzamiento (#PCDATA)>

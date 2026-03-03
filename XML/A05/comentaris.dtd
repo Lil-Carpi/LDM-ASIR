@@ -1,0 +1,24 @@
+<!-- Indica que el documento es un documento de comentarios y que puede haber más de uno -->
+<!ELEMENT comentaris (comentari+)>
+<!-- Comienza la estructura de comentario e indica qué contiene -->
+<!ELEMENT comentari (autor, (contenido | contingut), (data | fecha), likes, respostes?)>
+<!-- Indica el identificador del comentario -->
+<!ATTLIST comentari id CDATA #REQUIRED>
+<!-- Indica el autor del comentario y qué contiene -->
+<!ELEMENT autor ((nombre | nom), (info_extra | info_extra_alt)?)>
+<!-- Indica el nombre del autor -->
+<!ELEMENT nombre (#PCDATA)>
+<!-- Indica el nombre de usuario del autor -->
+<!ELEMENT nom (#PCDATA)>
+<!-- Proporciona información adicional del autor -->
+<!ELEMENT info_extra (#PCDATA)>
+<!-- Indica el contenido del comentario -->
+<!ELEMENT contingut (#PCDATA)>
+<!-- Indica la fecha del comentario -->
+<!ELEMENT data (#PCDATA)>
+<!-- Indica la fecha de publicación original -->
+<!ATTLIST data original CDATA #IMPLIED>
+<!-- Indica los "me gusta" del comentario -->
+<!ELEMENT likes (#PCDATA)>
+<!-- Indica las respuestas al comentario -->
+<!ELEMENT respostes (comentari*)>

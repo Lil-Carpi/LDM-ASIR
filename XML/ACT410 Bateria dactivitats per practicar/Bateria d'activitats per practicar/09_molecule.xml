@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<molecula nombre="agua">
+  <atomos>
+    <atomo id="a1" elemento="H" />
+    <atomo id="a2" elemento="O" />
+    <atomo id="a3" elemento="H" />
+  </atomos>
+  <enlaces>
+    <enlace atomoRefs="a1 a2" />
+    <enlace atomoRefs="a2 a3" />
+  </enlaces>
+</molecula>

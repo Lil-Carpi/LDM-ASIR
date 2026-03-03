@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contabilidad año="2011">
+  <apunte tipo="ingreso">
+    <fecha>24-02-2011</fecha>
+    <cantidad>1400,00</cantidad>
+    <concepto>Salario</concepto>
+  </apunte>
+  <apunte tipo="gasto">
+    <fecha>28-02-2011</fecha>
+    <cantidad>74,25</cantidad>
+    <concepto>Recibo luz</concepto>
+  </apunte>
+</contabilidad>

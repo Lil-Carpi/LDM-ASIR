@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comentarios>
+  <comentario id="com1" fecha="27/09/2011" hora="18:49">
+    <usuario>Pumuky</usuario>
+    <foto>foto1.jpg</foto>
+    <votosFavor>1</votosFavor>
+    <votosContra>0</votosContra>
+    <texto>
+      <![CDATA[Me gustó más la primera parte]]>
+    </texto>
+  </comentario>
+  <comentario id="com2" id_resp="com1" fecha="27/09/2011" hora="21:52">
+    <usuario>David</usuario>
+    <votosFavor>1</votosFavor>
+    <votosContra>0</votosContra>
+    <texto>
+      <![CDATA[Las primeras partes siempre son mejores que las segundas]]>
+    </texto>
+  </comentario>
+</comentarios>

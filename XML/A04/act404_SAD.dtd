@@ -1,0 +1,35 @@
+<!ELEMENT llibreCuina (recepta+)>
+<!-- indica la arrel i que conte dintre -->
+<!ELEMENT recepta (ingredients, pasos, tipusCuina, restaurants)>
+<!--in dica el ID de la recepte-->
+<!ATTLIST recepta id ID #REQUIRED>
+<!-- indica el titol de la recepta-->
+<!ATTLIST recepta titol CDATA #REQUIRED>
+<!-- indica els ingradients y que poden ser mes de un-->
+<!ELEMENT ingredients (ingredient+)>
+<!--indica el nom de l'ingredient i la quantitat-->
+<!ELEMENT ingredient (#PCDATA | quantitat)*>
+<!-- indica la referencia del ingredient amb el id i es obligatori-->
+<!ATTLIST ingredient ref ID #REQUIRED>
+<!-- indica la quantitat de cada ingredient -->
+<!ELEMENT quantitat (#PCDATA)>
+<!-- comença la estructura dels pasos a seguir i que ni poden haber mes de un-->
+<!ELEMENT pasos (pas+)>
+<!-- indica el pas-->
+<!ELEMENT pas (#PCDATA)>
+<!-- indica el tipus de cuina -->
+<!ELEMENT tipusCuina (#PCDATA)>
+<!-- comença la estructura dels restaurants i que ni poden haber mes de un-->
+<!ELEMENT restaurants (restaurant+)>
+<!-- indica la informacio del restaurant-->
+<!ELEMENT restaurant (nom, carrer?, nombre?, ciutat)>
+<!-- indica el id del restaurant-->
+<!ATTLIST restaurant idRest ID #IMPLIED>
+<!--indica el nom del restaurant-->
+<!ELEMENT nom (#PCDATA)>
+<!-- indica el carrer del restaurant-->
+<!ELEMENT carrer (#PCDATA)>
+<!-- indica el numero del restaurant en el carrer -->
+<!ELEMENT nombre (#PCDATA)>
+<!-- inmdica la ciutat a on esta el restaurant-->
+<!ELEMENT ciutat (#PCDATA)>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mensajes>
+  <mensaje>
+    <de>Pepe</de>
+    <para>Juan</para>
+    <hora>28/02/2011 17:48:23</hora>
+    <texto>¿Hola, Juan, qué haces?</texto>
+  </mensaje>
+  <mensaje>
+    <de>Juan</de>
+    <para>Pepe</para>
+    <copia>Ana</copia>
+    <copia>Xavi</copia>
+    <hora>28/02/2011 17:54:20</hora>
+    <texto>Aquí, aprendiendo XML</texto>
+    <importante />
+  </mensaje>
+</mensajes>

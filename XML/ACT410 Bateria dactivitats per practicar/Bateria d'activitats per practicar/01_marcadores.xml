@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marcadores>
+  <marcador>
+    <nombre>W3C</nombre>
+    <url>http://www.w3.org/</url>
+  </marcador>
+  <marcador>
+    <nombre>W3Schools</nombre>
+    <url>http://www.w3schools.com</url>
+    <descripcion>Sitio con tutoriales</descripcion>
+  </marcador>
+</marcadores>

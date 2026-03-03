@@ -1,0 +1,20 @@
+<!-- Define el elemento raíz para la ficha de un libro y todo su contenido -->
+<!ELEMENT llibre (title, n_pagines, Editorial, Idioma, Encuadernacion, ISBN, Año_de_publicacion, Plaza_de_edicion, Fecha_de_lanzamiento)>
+<!-- Indica el título del libro -->
+<!ELEMENT title (#PCDATA)>
+<!-- Indica el número de páginas -->
+<!ELEMENT n_pagines (#PCDATA)>
+<!-- Indica el nombre de la editorial -->
+<!ELEMENT Editorial (#PCDATA)>
+<!-- Indica el idioma del libro -->
+<!ELEMENT Idioma (#PCDATA)>
+<!-- Indica el tipo de encuadernación -->
+<!ELEMENT Encuadernacion (#PCDATA)>
+<!-- Indica el código ISBN del libro -->
+<!ELEMENT ISBN (#PCDATA)>
+<!-- Indica el año de publicación -->
+<!ELEMENT Año_de_publicacion (#PCDATA)>
+<!-- Indica la plaza de edición -->
+<!ELEMENT Plaza_de_edicion (#PCDATA)>
+<!-- Indica la fecha de lanzamiento -->
+<!ELEMENT Fecha_de_lanzamiento (#PCDATA)>
